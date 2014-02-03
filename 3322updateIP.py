@@ -20,7 +20,7 @@ class update():
             import GETIP
             self.myip=GETIP.get()
         except:
-            print "Please import GET-IP.py"
+            print "Please import GETIP.py"
             self.myip=None
         self.wildcard='ON' 						#ON为支持泛域名，可选
         self.mx=''								#指明 Mail eXchanger解析到一个IP，可选
