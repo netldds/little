@@ -6,12 +6,11 @@
 
 '''
 import base64,urllib,urllib2,httplib
-
 class update():
     def __init__(self):
     	try:
-    		self.Yusername=raw_input("帐号：")					#帐号
-        	self.Ypassword=raw_input("密码：")				#密码
+    		self.Yusername=raw_input("account:")					#帐号
+        	self.Ypassword=raw_input("password:")				#密码
         except:
         	print "IOError(error)"
         self.b64=base64.encodestring(("%s:%s"%(self.Yusername,self.Ypassword)))
