@@ -9,8 +9,11 @@ import base64,urllib,urllib2,httplib
 
 class update():
     def __init__(self):
-        self.Yusername='netldds'					#帐号
-        self.Ypassword='zhangliu110'				#密码
+    	try:
+    		self.Yusername=raw_input("帐号：")					#帐号
+        	self.Ypassword=raw_input("密码：")				#密码
+        except:
+        	print "IOError(error)"
         self.b64=base64.encodestring(("%s:%s"%(self.Yusername,self.Ypassword)))
         self.Author="Basic %s"%self.b64 				#BASE64编码为Authorization格式	
         print 'Authorization:',self.Author 		#为了处理Authorization
